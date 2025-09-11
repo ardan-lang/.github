@@ -544,3 +544,6 @@ g.greet(); // Hello, Ardan!
 - A: Extend the interpreter in C++ and register new functions in Env.
 
 ⸻
+
+- Developer: Chidume Nnamdi
+- Email: kurtwanger40@gmail.com
