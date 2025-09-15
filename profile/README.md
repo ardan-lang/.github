@@ -218,7 +218,7 @@ print(square(5)); // 25
 let adder = function(x) {
     return function(y) {
         return x + y;
-    }
+    };
 };
 let add5 = adder(5);
 print(add5(3)); // 8
@@ -226,7 +226,76 @@ print(add5(3)); // 8
 
 ### Default and Rest Arguments
 
-(Not yet implemented, but planned in syntax.)
+### 1. Default
+
+Default parameters allow a function parameter to have a fallback value if no argument is provided, or if `undefined` is explicitly passed.
+
+**Syntax:**
+
+```
+function greet(name = "World") {
+  console.log("Hello, " + name);
+}
+
+greet();         // Hello, World
+greet("Alice");  // Hello, Alice
+greet(undefined); // Hello, World (default applies)
+greet(null);     // Hello, null (default does NOT apply)
+```
+
+**Semantics:**
+
+* Default value expressions are evaluated **at call time**, not at function definition.
+* Defaults are only used when the argument is `missing` or explicitly `undefined`.
+* Defaults can reference earlier parameters:
+
+  ```
+  function f(a = 1, b = a + 2) {
+    console.log(a, b);
+  }
+  f();    // 1 3
+  f(5);   // 5 7
+  ```
+
+---
+
+### 2. Rest
+
+Rest parameters allow a function to capture all **remaining arguments** into a single array.
+
+**Syntax:**
+
+```
+function sum(...nums) {
+  return nums.reduce((a, b) => a + b, 0);
+}
+
+console.log(sum(1, 2, 3, 4)); // 10
+```
+
+**Semantics:**
+
+* Rest parameters must be the **last parameter** in the list.
+* They collect all extra arguments into a proper array.
+* If no extra arguments are supplied, the rest parameter is an empty array.
+* Rest parameters **cannot** have defaults, and there can only be **one**.
+
+---
+
+### 3. Combined Example
+
+```js
+function demo(a, b = 2, ...rest) {
+  console.log("a:", a);
+  console.log("b:", b);
+  console.log("rest:", rest);
+}
+
+demo(1);           // a:1, b:2, rest:[]
+demo(1, 10, 20);   // a:1, b:10, rest:[20]
+demo(1, undefined, 3, 4, 5);
+// a:1, b:2 (default used), rest:[3,4,5]
+```
 
 ⸻
 
@@ -236,7 +305,7 @@ Ardan supports all standard control flow constructs.
 
 ### If-Else
 
-```
+```ardan
 if (x > 10) {
     print("big");
 } else if (x > 5) {
@@ -544,6 +613,7 @@ g.greet(); // Hello, Ardan!
 - A: Extend the interpreter in C++ and register new functions in Env.
 
 ⸻
+
 
 - Developer: Chidume Nnamdi
 - Email: kurtwanger40@gmail.com
