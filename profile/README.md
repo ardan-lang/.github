@@ -50,11 +50,19 @@ Ardan is a modern programming language, implemented in C++. It features block sc
 Ardan is a C++ project. Build it with CMake or your preferred C++ toolchain.
 
 ```sh
-git clone https://github.com/philipszdavido/ardan-lang
+git clone https://github.com/ardan-lang/ardan-lang
 cd ardan-lang
 mkdir build && cd build
 cmake ..
 cmake --build .
+```
+
+Using scripts:
+
+```sh
+git clone https://github.com/ardan-lang/ardan-lang
+cd ardan-lang
+sudo sh ./build.sh
 ```
 
 Running a Ardan File
