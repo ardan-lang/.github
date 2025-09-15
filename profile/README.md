@@ -1,12 +1,12 @@
 # Ardan Programming Language
 
-Ardan is an experimental, dynamically typed programming language inspired by JavaScript, featuring a hand-written lexer, parser, and interpreter implemented in C++. Ardan supports variables, functions, classes, inheritance, arrays, objects, control flow, and modern syntax features such as let/const/var, scoping, and operator overloading.
+Ardan is an experimental, dynamically typed programming language, featuring a hand-written lexer, parser, and interpreter implemented in C++. Ardan supports variables, functions, classes, inheritance, arrays, objects, control flow, and modern syntax features such as let/const/var, scoping, and operator overloading.
 
 ## Features
 - **Dynamic Typing**: Variable types are determined at runtime.
 - **Lexical Scope**: Supports block, function, and global scoping with `var`, `let`, `const`.
 - **First-Class Functions**: Functions can be assigned to variables, passed as arguments, and returned.
-- **Classes & Inheritance**: JavaScript-like class syntax with fields, methods, and inheritance via `extends`.
+- **Classes & Inheritance**: Class syntax with fields, methods, and inheritance via `extends`.
 - **Arrays & Objects**: Flexible objects and arrays with dot and bracket notation.
 - **Comprehensive Operator Support**: Arithmetic, logical, bitwise, assignment, comparison, and more.
 - **Exception Handling**: Try/catch/finally for robust error handling.
@@ -15,7 +15,7 @@ Ardan is an experimental, dynamically typed programming language inspired by Jav
 
 Ardan Programming Language
 
-Ardan is a modern, JavaScript-inspired programming language, implemented in C++. It features block scoping, classes and inheritance, closures, rich expressions, built-in error handling, customizable standard library, and a flexible interpreter architecture. This documentation provides a comprehensive guide for Ardan, including language syntax, semantics, and usage, with detailed examples for every concept.
+Ardan is a modern programming language, implemented in C++. It features block scoping, classes and inheritance, closures, rich expressions, built-in error handling, customizable standard library, and a flexible interpreter architecture. This documentation provides a comprehensive guide for Ardan, including language syntax, semantics, and usage, with detailed examples for every concept.
 
 ⸻
 
@@ -76,7 +76,7 @@ Or start a REPL (not yet available):
 
 ### Variables
 
-Ardan supports three kinds of variable declarations, similar to JavaScript:
+Ardan supports three kinds of variable declarations:
 
 ```
 var x = 42;     // Function-scoped, mutable
